@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CCC6BAFDE51BA02C160F7A8 /* Pods_barksnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */; };
+		C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D06991E25B50A00B4B171 /* buttonUp.100.png */; };
 		C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955691E246FB000FA80F2 /* ImageViewController.swift */; };
 		C939556C1E2487B000FA80F2 /* whistle.wav in Resources */ = {isa = PBXBuildFile; fileRef = C939556B1E2487B000FA80F2 /* whistle.wav */; };
 		C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B1E1E246C5F0038C948 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		21564BAE441131ADDEB68401 /* Pods-barksnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.release.xcconfig"; sourceTree = "<group>"; };
 		A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_barksnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90D06991E25B50A00B4B171 /* buttonUp.100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonUp.100.png; sourceTree = "<group>"; };
 		C93955691E246FB000FA80F2 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C939556B1E2487B000FA80F2 /* whistle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistle.wav; sourceTree = "<group>"; };
 		C9499B1B1E246C5F0038C948 /* barksnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barksnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 		C9499B1D1E246C5F0038C948 /* barksnap */ = {
 			isa = PBXGroup;
 			children = (
+				C90D06991E25B50A00B4B171 /* buttonUp.100.png */,
 				C939556B1E2487B000FA80F2 /* whistle.wav */,
 				C9499B1E1E246C5F0038C948 /* AppDelegate.swift */,
 				C9499B201E246C5F0038C948 /* ViewController.swift */,
@@ -272,6 +275,7 @@
 				C9499B261E246C5F0038C948 /* Assets.xcassets in Resources */,
 				C9499B241E246C5F0038C948 /* Main.storyboard in Resources */,
 				C939556C1E2487B000FA80F2 /* whistle.wav in Resources */,
+				C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +506,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HW39442X24;
 				INFOPLIST_FILE = barksnap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,6 +522,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HW39442X24;
 				INFOPLIST_FILE = barksnap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

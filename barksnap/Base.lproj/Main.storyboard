@@ -41,15 +41,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-IS-4FV">
-                                <rect key="frame" x="152" y="598" width="71" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Snap"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-IS-4FV">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9dP-xX-oED"/>
+                                    <constraint firstAttribute="width" constant="75" id="kVL-Nl-IDI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="Snap" image="buttonUp.100.png"/>
                                 <connections>
                                     <action selector="buttonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="pan-fN-5zU"/>
                                     <action selector="buttonRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSo-Y8-8sH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press and hold!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-xw-IiV">
+                                <rect key="frame" x="88" y="515" width="198" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="MXW-0q-eFD"/>
+                                    <constraint firstAttribute="height" constant="49" id="McI-25-0Ke"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="198" id="kLD-LN-t7j"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="meU-3P-AQ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,6 +75,8 @@
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LBX-uW-91c"/>
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MhS-Pc-66s"/>
                             <constraint firstItem="1B0-IS-4FV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXh-KG-u8t"/>
+                            <constraint firstItem="1B0-IS-4FV" firstAttribute="top" secondItem="YCK-xw-IiV" secondAttribute="bottom" constant="8" id="Wyo-gJ-nx2"/>
+                            <constraint firstItem="YCK-xw-IiV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X9e-fA-ibt"/>
                             <constraint firstAttribute="trailing" secondItem="pyA-zE-0Ce" secondAttribute="trailing" id="ir0-QL-lvi"/>
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mIs-sJ-qN7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1B0-IS-4FV" secondAttribute="bottom" constant="20" id="y3p-NN-HSj"/>
@@ -66,6 +85,7 @@
                     <navigationItem key="navigationItem" id="jBf-xH-aK5"/>
                     <connections>
                         <outlet property="cameraView" destination="pyA-zE-0Ce" id="Ekg-lp-RYU"/>
+                        <outlet property="helpText" destination="YCK-xw-IiV" id="OFL-U2-JTL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,7 +104,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQN-Ch-FQj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQN-Ch-FQj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -118,6 +138,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="EQN-Ch-FQj" id="98p-QH-jpe"/>
+                        <outlet property="toolbar" destination="qJz-MJ-VbX" id="TmW-gm-HPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydy-sV-Jvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,4 +146,7 @@
             <point key="canvasLocation" x="621.60000000000002" y="139.880059970015"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="buttonUp.100.png" width="100" height="100"/>
+    </resources>
 </document>

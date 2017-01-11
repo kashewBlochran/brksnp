@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "barksnap/ImageViewController.swift"
-            timestampString = "505711681.279321"
+            timestampString = "505800440.308535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "action(z:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "action(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "barksnap/ViewController.swift"
-            timestampString = "505712877.893901"
+            timestampString = "505798084.099481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "playSound()"
             landmarkType = "7">
          </BreakpointContent>

@@ -16,15 +16,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIView!
     let cameraManager = CameraManager()
     
+    @IBOutlet weak var helpText: UILabel!
+    
+    let myAttribute = [
+        NSForegroundColorAttributeName: UIColor.white,
+        NSStrokeColorAttributeName: UIColor.black,
+        NSStrokeWidthAttributeName: -1.0
+        ] as [String : Any]
+    
+    var myAttrString: NSAttributedString!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //help text
+         myAttrString = NSAttributedString(string: "Press and hold!", attributes: myAttribute)
+        helpText.attributedText = myAttrString
+        
+        //camera
         cameraManager.showAccessPermissionPopupAutomatically = true
         addCameraToView()
-
+        
+        //animation
+//        let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
+//        pulseAnimation.duration = 1.0
+//        pulseAnimation.toValue = NSNumber(value: 1.0)
+//        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        pulseAnimation.autoreverses = true
+//        pulseAnimation.repeatCount = FLT_MAX
+//        
+//        self.helpText.layer.add(pulseAnimation, forKey: nil)
     
     }
 
@@ -48,7 +71,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         navigationController?.navigationBar.isHidden = true
         cameraManager.resumeCaptureSession()
     }
@@ -69,6 +92,8 @@ class ViewController: UIViewController {
         
         print("button pressed")
         playSound()
+        myAttrString = NSAttributedString(string: "Release!", attributes: myAttribute)
+        helpText.attributedText = myAttrString
         
     }
     
@@ -77,6 +102,8 @@ class ViewController: UIViewController {
         print("button released")
         //stop sound
         player?.stop()
+        
+        helpText.isHidden = true
         
         cameraManager.capturePictureWithCompletion({ (image, error) -> Void in
             if let errorOccured = error {
