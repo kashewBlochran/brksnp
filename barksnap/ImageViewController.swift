@@ -9,43 +9,42 @@
 import UIKit
 
 class ImageViewController: UIViewController {
+    @IBOutlet weak var bar: UIToolbar!
 
     var image: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     var watermarkedImage: UIImage?
-    @IBOutlet weak var toolbar: UIToolbar!
     override func viewDidLoad() {
         
-        print("view loaded in imageVC")
         super.viewDidLoad()
+        
+        let logo = UIImage(named: "barksnap3.png")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .center
+        self.navigationItem.titleView = imageView
 
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.barTintColor = UIColor(red: 73.0/255.0, green: 143.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 80.0)
         
-        
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for:.normal)
-        
+        //bar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 80.0)
 
-        
-        self.toolbar.barTintColor = UIColor(red: 0.0/255.0, green: 68.0/255.0, blue: 178.0/255.0, alpha: 1.0)
-
-        //self.title = "Got'em!"
-        
         //if image is coming in from other VC...
         if let validImage = self.image {
-        
-        //watermark image...
-            watermarkedImage = textToImage(drawText: "Barksnap.com", inImage: validImage, atPoint: CGPoint(x: 20, y: 20))
 
         //set imageview to valid image
-            self.imageView.image = watermarkedImage
+            self.imageView.image = validImage
+            
+            DispatchQueue.global(qos: .background).async {
+                //watermark image...
+                self.watermarkedImage = self.textToImage(drawText: "Barksnap.com", inImage: validImage, atPoint: CGPoint(x: 20, y: 20))
+                
+            }
         }
     
     }
     
-    func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
+    func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) ->
+        UIImage {
         let textColor = UIColor.white
         let textFont = UIFont(name: "Helvetica Bold", size: 200)!
         
@@ -86,6 +85,14 @@ class ImageViewController: UIViewController {
 
     }
     
+    @IBAction func save(_ sender: Any) {
+        
+        UIImageWriteToSavedPhotosAlbum(watermarkedImage!, nil, nil, nil);
+        let alert = UIAlertController(title: "Alert", message: "Image saved!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: {action in _ = self.navigationController?.popViewController(animated: true) }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     @IBAction func help(_ sender: UIBarButtonItem) {
         

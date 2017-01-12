@@ -39,7 +39,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyA-zE-0Ce">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-IS-4FV">
                                 <rect key="frame" x="150" y="572" width="75" height="75"/>
@@ -108,7 +108,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-MJ-VbX">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-MJ-VbX">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -118,12 +118,20 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0Va-dz-Vzp"/>
+                                    <barButtonItem systemItem="save" id="xtR-vJ-2jQ">
+                                        <connections>
+                                            <action selector="save:" destination="nm7-BU-fcE" id="NM0-RR-1v1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9QZ-Ot-Dld"/>
                                     <barButtonItem title="Help" id="fUK-rj-DYT">
                                         <connections>
                                             <action selector="help:" destination="nm7-BU-fcE" id="olv-vB-sVO"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,8 +145,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bar" destination="qJz-MJ-VbX" id="Mkb-4b-u7J"/>
                         <outlet property="imageView" destination="EQN-Ch-FQj" id="98p-QH-jpe"/>
-                        <outlet property="toolbar" destination="qJz-MJ-VbX" id="TmW-gm-HPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydy-sV-Jvp" userLabel="First Responder" sceneMemberID="firstResponder"/>

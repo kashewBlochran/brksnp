@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var cameraButton: UIView!
     let cameraManager = CameraManager()
-    
     @IBOutlet weak var helpText: UILabel!
     
     let myAttribute = [
@@ -30,6 +29,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //disable nav
+        navigationController?.navigationBar.isHidden = false
+        
+        //don't auto-save images
+        cameraManager.writeFilesToPhoneLibrary = false
         
         //help text
          myAttrString = NSAttributedString(string: "Press and hold!", attributes: myAttribute)
