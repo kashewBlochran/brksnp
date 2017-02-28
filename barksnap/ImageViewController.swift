@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController, STADelegateProtocol {
     @IBOutlet weak var bar: UIToolbar!
 
+    var startAppAd: STAStartAppAd?
     var image: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     var watermarkedImage: UIImage?
@@ -20,6 +21,11 @@ class ImageViewController: UIViewController {
 
         super.viewDidLoad()
         
+        //load ad
+        startAppAd = STAStartAppAd()
+        startAppAd!.load(withDelegate: self)
+        
+        //top banner
         let logo = UIImage(named: "barksnap3.png")
         let imageView = UIImageView(image: logo)
         imageView.contentMode = .center
@@ -41,8 +47,8 @@ class ImageViewController: UIViewController {
         }
     
     }
-    
-    
+
+    //watermark image and return
     func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) ->
         UIImage {
         let textColor = UIColor.white
@@ -65,11 +71,11 @@ class ImageViewController: UIViewController {
         return newImage!
     }
     
-    
+    //press to share an image...
     @IBAction func action(_ sender: UIBarButtonItem) {
         
         // set up activity view controller
-        let msg = "Snapped with Barksnap, the dog whistle camera app. www.barksnap.com #barksnap"
+        let msg = "Snappede with Barksnap, the dog whistle camera app. www.barksnap.com #barksnap"
         
         let sharedObjects:[AnyObject] = [watermarkedImage!, msg as AnyObject]
         
@@ -80,20 +86,36 @@ class ImageViewController: UIViewController {
         // exclude some activity types from the list (optional)
         //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
         
+        activityViewController.completionWithItemsHandler = {
+        
+            activity, success, items, error in
+            self.startAppAd!.show()
+        
+        }
+        
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
 
     }
     
+    //when save button pressed, save watermarked image, then show ad.
     @IBAction func save(_ sender: Any) {
         
         UIImageWriteToSavedPhotosAlbum(watermarkedImage!, nil, nil, nil);
         let alert = UIAlertController(title: "Alert", message: "Image saved!", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: {action in _ = self.navigationController?.popViewController(animated: true) }))
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: {action in self.startAppAd!.show()}))
         self.present(alert, animated: true, completion: nil)
         
     }
     
+    //when ad closes...
+    func didClose(_ ad: STAAbstractAd!) {
+        
+        _ = self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    //if help is needed...
     @IBAction func help(_ sender: UIBarButtonItem) {
         
         let alert = UIAlertController(title: "Alert", message: "Make sure your volume is on! Aim at your dog, press and hold, and release when your dog looks over. Try again!", preferredStyle: UIAlertControllerStyle.alert)

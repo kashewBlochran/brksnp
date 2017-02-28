@@ -22,6 +22,17 @@
 		C9499B291E246C5F0038C948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9499B271E246C5F0038C948 /* LaunchScreen.storyboard */; };
 		C9499B341E246C600038C948 /* barksnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B331E246C600038C948 /* barksnapTests.swift */; };
 		C9499B3F1E246C600038C948 /* barksnapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B3E1E246C600038C948 /* barksnapUITests.swift */; };
+		C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9C8DC151E65E316006DBF7F /* StartApp.bundle */; };
+		C9C8DC181E65E316006DBF7F /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC161E65E316006DBF7F /* StartApp.framework */; };
+		C9C8DC1A1E65E373006DBF7F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC191E65E373006DBF7F /* CoreTelephony.framework */; };
+		C9C8DC1C1E65E37E006DBF7F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC1B1E65E37E006DBF7F /* SystemConfiguration.framework */; };
+		C9C8DC1E1E65E388006DBF7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC1D1E65E388006DBF7F /* CoreGraphics.framework */; };
+		C9C8DC201E65E390006DBF7F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC1F1E65E390006DBF7F /* StoreKit.framework */; };
+		C9C8DC221E65E399006DBF7F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC211E65E399006DBF7F /* AdSupport.framework */; };
+		C9C8DC241E65E3A3006DBF7F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC231E65E3A3006DBF7F /* QuartzCore.framework */; };
+		C9C8DC261E65E3AB006DBF7F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */; };
+		C9C8DC281E65E3B6006DBF7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */; };
+		C9C8DC2A1E65E3CF006DBF7F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC291E65E3CF006DBF7F /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +75,18 @@
 		C9499B3A1E246C600038C948 /* barksnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barksnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9499B3E1E246C600038C948 /* barksnapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barksnapUITests.swift; sourceTree = "<group>"; };
 		C9499B401E246C600038C948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C8DC151E65E316006DBF7F /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		C9C8DC161E65E316006DBF7F /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		C9C8DC191E65E373006DBF7F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C9C8DC1B1E65E37E006DBF7F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9C8DC1D1E65E388006DBF7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9C8DC1F1E65E390006DBF7F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C9C8DC211E65E399006DBF7F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C9C8DC231E65E3A3006DBF7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C9C8DC291E65E3CF006DBF7F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C9C8DC2D1E65E80E006DBF7F /* barksnap-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "barksnap-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +95,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C8DC2A1E65E3CF006DBF7F /* libz.tbd in Frameworks */,
+				C9C8DC281E65E3B6006DBF7F /* AVFoundation.framework in Frameworks */,
+				C9C8DC261E65E3AB006DBF7F /* CoreMedia.framework in Frameworks */,
+				C9C8DC241E65E3A3006DBF7F /* QuartzCore.framework in Frameworks */,
+				C9C8DC221E65E399006DBF7F /* AdSupport.framework in Frameworks */,
+				C9C8DC201E65E390006DBF7F /* StoreKit.framework in Frameworks */,
+				C9C8DC1E1E65E388006DBF7F /* CoreGraphics.framework in Frameworks */,
+				C9C8DC1C1E65E37E006DBF7F /* SystemConfiguration.framework in Frameworks */,
+				C9C8DC1A1E65E373006DBF7F /* CoreTelephony.framework in Frameworks */,
 				1CCC6BAFDE51BA02C160F7A8 /* Pods_barksnap.framework in Frameworks */,
+				C9C8DC181E65E316006DBF7F /* StartApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +129,9 @@
 		C9499B121E246C5E0038C948 = {
 			isa = PBXGroup;
 			children = (
+				C9C8DC2D1E65E80E006DBF7F /* barksnap-Bridging-Header.h */,
+				C9C8DC151E65E316006DBF7F /* StartApp.bundle */,
+				C9C8DC161E65E316006DBF7F /* StartApp.framework */,
 				C9499B1D1E246C5F0038C948 /* barksnap */,
 				C9499B321E246C600038C948 /* barksnapTests */,
 				C9499B3D1E246C600038C948 /* barksnapUITests */,
@@ -156,6 +192,15 @@
 		DFB4EA2F4FF0A8670F79513F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9C8DC291E65E3CF006DBF7F /* libz.tbd */,
+				C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */,
+				C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */,
+				C9C8DC231E65E3A3006DBF7F /* QuartzCore.framework */,
+				C9C8DC211E65E399006DBF7F /* AdSupport.framework */,
+				C9C8DC1F1E65E390006DBF7F /* StoreKit.framework */,
+				C9C8DC1D1E65E388006DBF7F /* CoreGraphics.framework */,
+				C9C8DC1B1E65E37E006DBF7F /* SystemConfiguration.framework */,
+				C9C8DC191E65E373006DBF7F /* CoreTelephony.framework */,
 				A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */,
 			);
 			name = Frameworks;
@@ -291,6 +336,7 @@
 				C939556C1E2487B000FA80F2 /* whistle.wav in Resources */,
 				C90D06A01E272FB400B4B171 /* barksnap3.png in Resources */,
 				C90D069E1E272EDA00B4B171 /* barksnap2.png in Resources */,
+				C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */,
 				C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,10 +570,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HW39442X24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = barksnap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "barksnap-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -540,10 +591,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HW39442X24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = barksnap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "barksnap-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

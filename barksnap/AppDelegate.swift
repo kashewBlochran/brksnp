@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        //nav bar
         UINavigationBar.appearance().barTintColor = UIColor(red: 73.0/255.0, green: 143.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.white
+        
+        // initialize the StartApp SDK with your appID and devID
+        var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
+        sdk.appID = "211085028"
+        sdk.devID = "111702613"
 
         
         return true
