@@ -14,8 +14,10 @@ class ImageViewController: UIViewController {
     var image: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     var watermarkedImage: UIImage?
+    @IBOutlet weak var save: UIBarButtonItem!
+    
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
         
         let logo = UIImage(named: "barksnap3.png")
@@ -34,14 +36,12 @@ class ImageViewController: UIViewController {
         //set imageview to valid image
             self.imageView.image = validImage
             
-            DispatchQueue.global(qos: .background).async {
-                //watermark image...
-                self.watermarkedImage = self.textToImage(drawText: "Barksnap.com", inImage: validImage, atPoint: CGPoint(x: 20, y: 20))
-                
-            }
+        //watermark...
+        self.watermarkedImage = self.textToImage(drawText: "Barksnap.com", inImage: validImage, atPoint: CGPoint(x: 20, y: 20))
         }
     
     }
+    
     
     func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) ->
         UIImage {
@@ -62,23 +62,23 @@ class ImageViewController: UIViewController {
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
         return newImage!
     }
     
     
     @IBAction func action(_ sender: UIBarButtonItem) {
-       
-        // image to share
-        let shareImage = self.imageView.image
         
         // set up activity view controller
-        let imageToShare = [ shareImage! ]
-        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        let msg = "Snapped with Barksnap, the dog whistle camera app. www.barksnap.com #barksnap"
+        
+        let sharedObjects:[AnyObject] = [watermarkedImage!, msg as AnyObject]
+        
+        
+        let activityViewController = UIActivityViewController(activityItems: sharedObjects, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         
         // exclude some activity types from the list (optional)
-        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
         
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)

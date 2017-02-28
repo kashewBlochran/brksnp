@@ -13,7 +13,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     @IBOutlet weak var cameraView: UIView!
-    @IBOutlet weak var cameraButton: UIView!
+    @IBOutlet weak var cameraButton: UIButton!
     let cameraManager = CameraManager()
     @IBOutlet weak var helpText: UILabel!
     
@@ -76,7 +76,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
+        cameraButton.isEnabled = true
         navigationController?.navigationBar.isHidden = true
         cameraManager.resumeCaptureSession()
     }
@@ -93,6 +94,7 @@ class ViewController: UIViewController {
         print(cameraManager.addPreviewLayerToView(self.cameraView))
         
     }
+    
     @IBAction func buttonDown(_ sender: UIButton) {
         
         print("button pressed")
@@ -107,6 +109,8 @@ class ViewController: UIViewController {
         print("button released")
         //stop sound
         player?.stop()
+        
+        cameraButton.isEnabled = false
         
         helpText.isHidden = true
         
