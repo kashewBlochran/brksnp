@@ -75,7 +75,7 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     @IBAction func action(_ sender: UIBarButtonItem) {
         
         // set up activity view controller
-        let msg = "Snappede with Barksnap, the dog whistle camera app. www.barksnap.com #barksnap"
+        let msg = "Snapped with Barksnap, the dog whistle camera app. www.barksnap.com"
         
         let sharedObjects:[AnyObject] = [watermarkedImage!, msg as AnyObject]
         
