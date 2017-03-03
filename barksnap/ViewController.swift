@@ -9,6 +9,7 @@
 import UIKit
 import CameraManager
 import AVFoundation
+import MediaPlayer
 
 class ViewController: UIViewController {
 
@@ -30,6 +31,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //check system volume
+        let volume = AVAudioSession.sharedInstance().outputVolume;
+        print(volume)
+        
+        //turn volume up
+        (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
+
         //disable nav
         navigationController?.navigationBar.isHidden = false
         

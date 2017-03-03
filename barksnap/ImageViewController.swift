@@ -83,8 +83,15 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         let activityViewController = UIActivityViewController(activityItems: sharedObjects, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         
-        // exclude some activity types from the list (optional)
-        //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        // exclude some activity types
+        activityViewController.excludedActivityTypes = [ UIActivityType.postToTwitter,
+                                                         UIActivityType.postToFacebook,
+                                                         UIActivityType.addToReadingList,
+                                                         UIActivityType.print,
+                                                         UIActivityType.assignToContact,
+                                                         UIActivityType.saveToCameraRoll,
+                                                         UIActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")
+                                                          ]
         
         activityViewController.completionWithItemsHandler = {
         
@@ -111,15 +118,16 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     //when ad closes...
     func didClose(_ ad: STAAbstractAd!) {
         
-        _ = self.navigationController?.popViewController(animated: true)
+        //_ = self.navigationController?.popViewController(animated: true)
+        print("ad finished.")
         
     }
     
     //if help is needed...
     @IBAction func help(_ sender: UIBarButtonItem) {
         
-        let alert = UIAlertController(title: "Alert", message: "Make sure your volume is on! Aim at your dog, press and hold, and release when your dog looks over. Try again!", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: "Alert", message: "Aim at your dog, press and hold to emit dog whistle, and release when your dog looks over. Tip: use treats to encourage and reinforce good behavior!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
     }
