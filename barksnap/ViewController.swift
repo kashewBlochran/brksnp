@@ -31,6 +31,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+            performSegue(withIdentifier: "onboard", sender: self)
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            performSegue(withIdentifier: "onboard", sender: self)
+        }
+        
+        
+        
+        cameraButton.alpha = 0.0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cameraButton.alpha = 1.0
+        })
+        
         //check system volume
         let volume = AVAudioSession.sharedInstance().outputVolume;
         print(volume)
@@ -85,6 +102,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+
+        cameraButton.setImage(UIImage(named: "Shutter.png"), for: UIControlState.normal)
         cameraButton.isEnabled = true
         navigationController?.navigationBar.isHidden = true
         cameraManager.resumeCaptureSession()
@@ -107,12 +126,15 @@ class ViewController: UIViewController {
         
         print("button pressed")
         playSound()
+        cameraButton.setImage(UIImage(named: "Shutter_Press.png"), for: UIControlState.normal)
         myAttrString = NSAttributedString(string: "Release!", attributes: myAttribute)
         helpText.attributedText = myAttrString
         
     }
     
     @IBAction func buttonRelease(_ sender: UIButton) {
+        
+        cameraButton.setImage(UIImage(named: "Shutter.png"), for: UIControlState.normal)
         
         print("button released")
         //stop sound
