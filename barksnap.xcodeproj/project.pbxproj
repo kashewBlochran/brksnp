@@ -15,6 +15,7 @@
 		C90D06A41E27357700B4B171 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */; };
 		C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955691E246FB000FA80F2 /* ImageViewController.swift */; };
 		C939556C1E2487B000FA80F2 /* whistle.wav in Resources */ = {isa = PBXBuildFile; fileRef = C939556B1E2487B000FA80F2 /* whistle.wav */; };
+		C93E46481EAD0B830058CC58 /* amazonView.html in Resources */ = {isa = PBXBuildFile; fileRef = C93E46471EAD0B820058CC58 /* amazonView.html */; };
 		C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B1E1E246C5F0038C948 /* AppDelegate.swift */; };
 		C9499B211E246C5F0038C948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B201E246C5F0038C948 /* ViewController.swift */; };
 		C9499B241E246C5F0038C948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9499B221E246C5F0038C948 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		C93955691E246FB000FA80F2 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C939556B1E2487B000FA80F2 /* whistle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistle.wav; sourceTree = "<group>"; };
+		C93E46471EAD0B820058CC58 /* amazonView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = amazonView.html; sourceTree = "<group>"; };
 		C9499B1B1E246C5F0038C948 /* barksnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barksnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9499B1E1E246C5F0038C948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9499B201E246C5F0038C948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				C93955691E246FB000FA80F2 /* ImageViewController.swift */,
 				C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */,
 				C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */,
+				C93E46471EAD0B820058CC58 /* amazonView.html */,
 			);
 			path = barksnap;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				C95234A81E7ECAFB0027C1FE /* Shutter.png in Resources */,
 				C95234A51E7ECAFB0027C1FE /* SavedCheckMark.png in Resources */,
 				C95234A61E7ECAFB0027C1FE /* Share.png in Resources */,
+				C93E46481EAD0B830058CC58 /* amazonView.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

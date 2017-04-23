@@ -41,35 +41,28 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0001_2 - Onboarding.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EgE-Pr-WdD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BD-hs-WgK">
-                                <rect key="frame" x="157" y="512" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONk-IB-Hqs">
+                                <rect key="frame" x="157" y="471" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Wp8-Zs-vvI"/>
-                                    <constraint firstAttribute="width" constant="60" id="YFN-Ps-poC"/>
+                                    <constraint firstAttribute="height" constant="60" id="sl8-73-rE1"/>
+                                    <constraint firstAttribute="width" constant="60" id="w3b-RG-728"/>
                                 </constraints>
                                 <state key="normal" image="Next_White.png"/>
                                 <connections>
-                                    <action selector="next:" destination="evu-v5-FrU" eventType="touchUpInside" id="dbn-Fy-xCW"/>
+                                    <action selector="next:" destination="evu-v5-FrU" eventType="touchUpInside" id="E0U-Jj-DYP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="5BD-hs-WgK" secondAttribute="trailing" constant="142" id="7dY-ze-57s"/>
                             <constraint firstItem="EgE-Pr-WdD" firstAttribute="leading" secondItem="ltm-uA-9UN" secondAttribute="leading" id="B3I-w7-fYW"/>
-                            <constraint firstItem="Gpi-bF-6s3" firstAttribute="top" secondItem="5BD-hs-WgK" secondAttribute="bottom" constant="95" id="GeC-9c-kGh"/>
-                            <constraint firstItem="5BD-hs-WgK" firstAttribute="centerX" secondItem="ltm-uA-9UN" secondAttribute="centerX" id="LxM-ii-eBR"/>
+                            <constraint firstItem="Gpi-bF-6s3" firstAttribute="top" secondItem="ONk-IB-Hqs" secondAttribute="bottom" constant="136" id="BtO-xp-MPa"/>
                             <constraint firstItem="EgE-Pr-WdD" firstAttribute="centerX" secondItem="ltm-uA-9UN" secondAttribute="centerX" id="Mmo-qN-afa"/>
-                            <constraint firstItem="5BD-hs-WgK" firstAttribute="leading" secondItem="ltm-uA-9UN" secondAttribute="leadingMargin" constant="141" id="O0L-Oz-EPr"/>
                             <constraint firstAttribute="trailing" secondItem="EgE-Pr-WdD" secondAttribute="trailing" id="Xg3-tQ-tmQ"/>
-                            <constraint firstItem="Gpi-bF-6s3" firstAttribute="top" secondItem="5BD-hs-WgK" secondAttribute="bottom" constant="95" id="YEt-Wi-QpG"/>
                             <constraint firstItem="Gpi-bF-6s3" firstAttribute="top" secondItem="EgE-Pr-WdD" secondAttribute="bottom" id="bgu-Iq-rB6"/>
                             <constraint firstItem="EgE-Pr-WdD" firstAttribute="top" secondItem="ltm-uA-9UN" secondAttribute="top" id="c8d-hh-QI2"/>
+                            <constraint firstItem="ONk-IB-Hqs" firstAttribute="centerX" secondItem="ltm-uA-9UN" secondAttribute="centerX" id="cbQ-Cm-1TM"/>
                             <constraint firstItem="EgE-Pr-WdD" firstAttribute="centerY" secondItem="ltm-uA-9UN" secondAttribute="centerY" id="j87-BC-nU0"/>
-                            <constraint firstItem="5BD-hs-WgK" firstAttribute="leading" secondItem="ltm-uA-9UN" secondAttribute="leadingMargin" constant="141" id="kEs-ks-pE5"/>
-                            <constraint firstItem="5BD-hs-WgK" firstAttribute="centerX" secondItem="ltm-uA-9UN" secondAttribute="centerX" id="lFp-mt-v35"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5BD-hs-WgK" secondAttribute="trailing" constant="142" id="tuk-ey-Tkv"/>
-                            <constraint firstItem="5BD-hs-WgK" firstAttribute="top" secondItem="3Bz-Am-Q9T" secondAttribute="bottom" constant="492" id="yI6-vL-7t3"/>
                         </constraints>
                     </view>
                 </viewController>
