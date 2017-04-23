@@ -132,6 +132,7 @@ build/
 #
 # NB: this is exclusive with OPTION 2 below
 xcuserdata/
+barksnap.xcworkspace/xcuserdata/matt.xcuserdatad/UserInterfaceState.xcuserstate
 
 # OPTION 2: ---------------------------------
 #     get rid of ALL personal settings, but KEEP SOME OF THEM
